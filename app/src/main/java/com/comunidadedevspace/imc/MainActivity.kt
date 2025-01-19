@@ -23,8 +23,13 @@ class MainActivity : AppCompatActivity() {
     // ação do botão
     btCalcular.setOnClickListener {
         //recuperar o texto digitado
-        var peso = edtPeso.text
-        var altura = edtAltura.text
+        var peso: Float = edtPeso.text.toString().toFloat()
+        var altura: Float = edtAltura.text.toString().toFloat()
+
+        var alturaQ2: Float = altura * altura
+        var resultado: Float = peso / alturaQ2
+
+        println("Seu IMC é: " + resultado)
 
         //validar se todos os campos foram preenchidos
 
