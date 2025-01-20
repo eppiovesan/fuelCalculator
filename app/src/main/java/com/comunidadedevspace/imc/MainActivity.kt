@@ -3,6 +3,7 @@ package com.comunidadedevspace.imc
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
@@ -23,13 +24,36 @@ class MainActivity : AppCompatActivity() {
     // ação do botão
     btCalcular.setOnClickListener {
         //recuperar o texto digitado
-        var peso: Float = edtPeso.text.toString().toFloat()
-        var altura: Float = edtAltura.text.toString().toFloat()
 
-        var alturaQ2: Float = altura * altura
-        var resultado: Float = peso / alturaQ2
 
-        println("Seu IMC é: " + resultado)
+        var pesoStr: String = edtPeso.text.toString()
+        var alturaStr : String = edtAltura.text.toString()
+
+        //validando se os campos estão preenchido
+        if (pesoStr.isNotEmpty() && alturaStr.isNotEmpty()){
+            var peso: Float = pesoStr.toFloat()
+            var altura: Float = alturaStr.toFloat()
+
+            var alturaQ2: Float = altura * altura
+            var resultado: Float = peso / alturaQ2
+
+            println("Seu IMC é: " + resultado)
+        }
+        else{
+            //mostrar mensagem ao usuário
+            Snackbar
+                .make(
+                    edtPeso,
+                    "Preencha todos os campos",
+                    Snackbar.LENGTH_LONG
+                ).show()
+
+
+        }
+
+
+
+
 
         //validar se todos os campos foram preenchidos
 
