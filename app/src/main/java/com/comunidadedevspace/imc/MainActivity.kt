@@ -1,5 +1,6 @@
 package com.comunidadedevspace.imc
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -36,6 +37,35 @@ class MainActivity : AppCompatActivity() {
 
             var alturaQ2: Float = altura * altura
             var resultado: Float = peso / alturaQ2
+
+
+            // classificação
+            var classificacao: String? = null
+            if (resultado < 18.5f){
+                classificacao = "MAGREZA"
+            }
+            else if (resultado >=18.5f && resultado <= 24.9f){
+                classificacao = "NORMAL"
+            }
+            else if (resultado >=25f && resultado <= 29.9f){
+                classificacao = "SOBREPESO"
+            }
+            else if (resultado >=30f && resultado <= 39.9f){
+                classificacao = "OBESIDADE"
+            }
+            else {
+                classificacao = "OBESIDADE GRAVE"
+            }
+
+            // navegar para próxima tela
+                // criando a intent
+                val intent = Intent(this,ResultActivity:: class.java)
+                // enviando o resultado obtido para a outra tela
+                // a KEY_RESULT_IMC é uma constante criada no arquivo ResultActivity para enviar corretamente a informação do resultado
+                intent.putExtra(KEY_RESULT_IMC, resultado)
+            intent.putExtra(KEY_CLASSIFICACAO_IMC, classificacao)
+                startActivity(intent)
+
 
             println("Seu IMC é: " + resultado)
         }
