@@ -1,9 +1,11 @@
 package com.comunidadedevspace.imc
 
+import android.R.color
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
@@ -27,6 +29,11 @@ class ResultActivity : AppCompatActivity() {
         tvClassificacao.text = classificacao
 
 
+        val cor = when (classificacao){
+            "NORMAL" -> ContextCompat.getColor(this, R.color.primary650 )
+            else -> ContextCompat.getColor(this, R.color.red)
+        }
+        tvClassificacao.setTextColor(cor)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

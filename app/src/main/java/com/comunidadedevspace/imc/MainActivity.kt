@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
                 // enviando o resultado obtido para a outra tela
                 // a KEY_RESULT_IMC é uma constante criada no arquivo ResultActivity para enviar corretamente a informação do resultado
                 intent.putExtra(KEY_RESULT_IMC, resultado)
-            intent.putExtra(KEY_CLASSIFICACAO_IMC, classificacao)
+                intent.putExtra(KEY_CLASSIFICACAO_IMC, classificacao)
                 startActivity(intent)
 
 
