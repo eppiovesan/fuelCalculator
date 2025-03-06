@@ -10,7 +10,7 @@ Screenshots
 <img src="https://github.com/user-attachments/assets/6f9347d1-b2d7-4103-9431-bb48b6342171" width = 260 />
 <img src="https://github.com/user-attachments/assets/0a2584d6-083b-4c5f-a7ea-e69f29fcdda7" width = 260 /> 
 <img src="https://github.com/user-attachments/assets/1c77a65d-857e-4458-a78b-fcea1200316f" width = 260 /> 
-
+<img src="https://github.com/user-attachments/assets/731afe5b-10af-48b1-b25c-b6df4c0825ff" width = 260 />
 
 
 ## Tecnologias
