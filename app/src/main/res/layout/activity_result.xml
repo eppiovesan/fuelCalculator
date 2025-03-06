@@ -15,12 +15,13 @@
         android:id="@+id/vg_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
         android:background="@drawable/gradient_bg"
-        android:orientation="vertical"
-        android:layout_marginTop="0dp" >
+        android:orientation="vertical">
         <!-- app:layout_constraintEnd_toEndOf="parent"
      app:layout_constraintStart_toStartOf="parent"
      app:layout_constraintTop_toTopOf="parent"> -->
+
 
         <!-- icone balança -->
         <ImageView
@@ -30,7 +31,9 @@
             android:layout_marginTop="48dp"
             android:layout_marginBottom="6dp"
             android:src="@drawable/ic_weight"
-            app:tint="@color/white" />
+            app:tint="@color/white"
+
+            />
 
         <!--titulo -->
         <TextView
@@ -58,16 +61,16 @@
             android:id="@+id/tv_result"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="36dp"
             android:layout_marginTop="12dp"
+            android:layout_marginBottom="36dp"
             android:gravity="center"
+            android:maxLength="5"
+            android:textColor="@color/white"
             android:textSize="48dp"
             android:textStyle="bold"
-            android:textColor="@color/white"
-            android:maxLength="5"
-            tools:text="23.66"
             app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="163dp" />
+            tools:layout_editor_absoluteX="163dp"
+            tools:text="23.66" />
 
     </LinearLayout>
 
@@ -96,5 +99,40 @@
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:layout_editor_absoluteX="163dp" />
 
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:layout_marginTop="150dp"
+    android:layout_gravity="center" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_refresh"
+        app:tint="@color/primary650" />
+
+
+
+    <Button
+        android:id="@+id/bt_Recalcular"
+        style="@style/Widget.AppCompat.Button.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:baselineAligned="false"
+        android:text="Recalcular"
+        android:textColor="@color/primary650"
+        android:paddingLeft="6dp"
+        />
+
+
 
 </LinearLayout>
+
+
+
+</LinearLayout>
+
+

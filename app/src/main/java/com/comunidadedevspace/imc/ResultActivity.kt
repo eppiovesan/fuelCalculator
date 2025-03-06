@@ -1,7 +1,9 @@
 package com.comunidadedevspace.imc
 
 import android.R.color
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -40,5 +42,20 @@ class ResultActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val bt_recalcular = findViewById<Button>(R.id.bt_Recalcular)
+
+        bt_recalcular.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            // iniciando a MainActivity
+            startActivity(intent)
+            // fechar a tela de Result Activity para evitar empilhamento
+            finish()
+
+
+        }
+
     }
+
+
 }
