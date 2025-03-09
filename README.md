@@ -8,9 +8,11 @@ Seu objetivo é calcular o IMC a partir das informações de peso e altura forne
 Screenshots
 
 <img src="https://github.com/user-attachments/assets/6f9347d1-b2d7-4103-9431-bb48b6342171" width = 260 />
-<img src="https://github.com/user-attachments/assets/0a2584d6-083b-4c5f-a7ea-e69f29fcdda7" width = 260 /> 
-<img src="https://github.com/user-attachments/assets/1c77a65d-857e-4458-a78b-fcea1200316f" width = 260 /> 
-<img src="https://github.com/user-attachments/assets/731afe5b-10af-48b1-b25c-b6df4c0825ff" width = 260 />
+<img src="https://github.com/user-attachments/assets/0384f88f-91f0-4449-a6ab-0ffbf3d299ef" width = 260 /> 
+<img src="https://github.com/user-attachments/assets/a709bfab-5cf0-4752-98b2-9d6a32aea575" width = 260 /> 
+<img src="https://github.com/user-attachments/assets/1b68c440-4de2-4910-9c3d-4509e56f8245" width = 260 />
+
+
 
 
 ## Tecnologias
@@ -25,6 +27,7 @@ Screenshots
     - TextView
     - EditText
     - Buttom
+- AlertDialog
 
 
 ## License
