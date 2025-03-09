@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomAlertDialog" parent="Theme.Material3.Light.Dialog.Alert">
+        <item name="colorAccent">#4CAF50</item>
+        <item name="android:background">#F9F9F9F9</item>
+        <item name="android:gravity">center</item>
+        <item name="android:radius">@dimen/cardview_default_elevation</item>
+        <item name="android:buttonBarNeutralButtonStyle">@style/NeutralBottomStyle</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="NeutralBottomStyle" parent="Widget.Material3.Button">
+        <item name="android:textColor">@color/primary650</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="android:layout_marginLeft">180dp</item>
+
+    </style>
+
+</resources>
+
