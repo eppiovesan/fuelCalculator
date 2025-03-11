@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">calculadoraimc</string>
+    <string name="desc_telainicial">Não tem ideia de quanto vai gastar de gasolina na sua viagem? Então está no lugar certo!</string>
+    <string name="titulo_inicial">Calculadora de gasto de combustível</string>
 </resources>
