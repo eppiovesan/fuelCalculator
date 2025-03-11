@@ -4,6 +4,8 @@
 <!-- You can add more screenshots here if you like -->
 Screenshots
 
+<img src="https://github.com/user-attachments/assets/95d63db2-57d0-48e2-a578-a9bb5fc9c1a1" width = 260 />
+
 
 ## License
 ```
