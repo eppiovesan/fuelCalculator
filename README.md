@@ -5,6 +5,9 @@
 Screenshots
 
 <img src="https://github.com/user-attachments/assets/95d63db2-57d0-48e2-a578-a9bb5fc9c1a1" width = 260 />
+<img src="https://github.com/user-attachments/assets/4d82b50a-6515-4d0f-aa1a-ed21fe5e57f8" width = 260 />
+
+
 
 
 ## License
