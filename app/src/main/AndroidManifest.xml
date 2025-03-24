@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Calculadoraimc"
         tools:targetApi="31">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -21,6 +22,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".PriceFuelActivity"
+            android:exported="true" />
+        <activity android:name=".FuelConsumptionActivity"
+            android:exported="true" />
+        <activity android:name=".template.DistanceActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

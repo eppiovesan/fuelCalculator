@@ -5,5 +5,11 @@
         -- <item name="colorPrimary">@color/grey300</item>
     </style>
 
+    <style name="BotaoPadrao">
+        <item name="android:background">@color/grey300</item>
+        <item name="android:textColor">@color/grey800</item>
+
+    </style>
+
     <style name="Theme.Calculadoraimc" parent="Base.Theme.Calculadoraimc" />
 </resources>

@@ -1,5 +1,7 @@
-package com.comunidadedevspace.imc
+package com.comunidadedevspace.imc.template
 
+
+import com.comunidadedevspace.imc.R
 import android.R.color
 import android.app.AlertDialog
 import android.content.Intent
@@ -13,22 +15,27 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.comunidadedevspace.imc.template.DistanceActivity
+import com.comunidadedevspace.imc.voltarTelaAnterior
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
-class MainActivity : AppCompatActivity() {
+class DistanceActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_distance)
 
-        val bt_iniciar = findViewById<Button>(R.id.btn_iniciar)
+        val bt_voltar = findViewById<Button>(R.id.btn_voltar)
 
-        bt_iniciar.setOnClickListener {
-            val intent = Intent(this,PriceFuelActivity::class.java)
-            startActivity(intent)
-
+        bt_voltar.setOnClickListener {
+            voltarTelaAnterior(this)
         }
 
+
+
     }
+
+
+
 }
