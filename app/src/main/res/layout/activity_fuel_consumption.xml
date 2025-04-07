@@ -59,6 +59,8 @@
                 android:background="@drawable/rounded_bg"
                 android:drawableEnd="@drawable/consumption_ic"
                 android:hint="Ex: 10km/l"
+                style="@style/TextoPadrao"
+                android:textColorHint="@color/grey500"
                 android:inputType="numberDecimal"
                 android:maxLength="6"
 

@@ -18,6 +18,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,8 +26,7 @@ class MainActivity : AppCompatActivity() {
         val bt_iniciar = findViewById<Button>(R.id.btn_iniciar)
 
         bt_iniciar.setOnClickListener {
-            val intent = Intent(this,PriceFuelActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, PriceFuelActivity::class.java))
 
         }
 

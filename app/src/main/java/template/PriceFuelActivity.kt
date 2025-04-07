@@ -13,58 +13,62 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
-
+import com.comunidadedevspace.imc.KEY_PRICE_FUEL
+import com.comunidadedevspace.imc.CalculoViewModel
+import com.comunidadedevspace.imc.template.fuelCalculator
 
 class PriceFuelActivity : AppCompatActivity() {
+    private lateinit var viewModel: CalculoViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_price_fuel)
 
-        var edtPrice = findViewById<TextInputEditText>(R.id.edt_price_fuel)
-
-        //botão voltar
+        val bt_continuar = findViewById<Button>(R.id.btn_continuar)
         val bt_voltar = findViewById<Button>(R.id.btn_voltar)
+        var viewModel = (application as fuelCalculator).sharedViewModel
+
+        bt_continuar.setOnClickListener {
+            buttonContinuar()
+        }
 
         bt_voltar.setOnClickListener {
-            voltarTelaAnterior(this)
+            buttonVoltar()
         }
+    }
 
+    private fun setFuelPrice(): TextInputEditText? {
+        var edtPrice = findViewById<TextInputEditText>(R.id.edt_price_fuel)
 
-        // botão continuar
-        val bt_continuar = findViewById<Button>(R.id.btn_continuar)
-        bt_continuar.setOnClickListener {
-            var priceFuelstr: String = edtPrice.text.toString()
-            //verificando se o campo não está vazio
-            if (priceFuelstr.isNotEmpty()){
-                // convertendo o valor do campo
-                var price: Float =  priceFuelstr.toFloat()
-                //armazenando o valor do campo e passando para outra tela
-                val intent2 = Intent(this,FuelConsumptionActivity::class.java)
-                intent2.putExtra(KEY_PRICE_FUEL, price )
-                startActivity(intent2)
-
-            }
-            //se o campo estiver vazio
-            else{
-                //mostrar mensagem ao usuário
-                Snackbar
-                    .make(
-                        edtPrice,
-                        "Preencha o preço do combustível",
-                        Snackbar.LENGTH_LONG
-                    ).show()
-            }
-
-
-
-
+        if (edtPrice.text.toString().isNotEmpty()) {
+            return edtPrice
+        } else {
+            Snackbar
+                .make(
+                    edtPrice,
+                    "Preencha o preço do combustível",
+                    Snackbar.LENGTH_LONG
+                ).show()
+            return null
         }
+    }
 
 
+    private fun buttonContinuar() {
+        var viewModel = (application as fuelCalculator).sharedViewModel
+        var edtPrice = setFuelPrice()
+        if (edtPrice != null) {
+            val fuelPrice = edtPrice.text.toString().toFloat()
+            viewModel.priceFuel = fuelPrice
+            startActivity(Intent(this, FuelConsumptionActivity::class.java))
+        }
+    }
 
-
+    private fun buttonVoltar(){
+        voltarTelaAnterior(this)
     }
 }

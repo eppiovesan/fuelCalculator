@@ -101,6 +101,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Ex: 3.69"
+                style="@style/TextoPadrao"
+                android:textColorHint="@color/grey500"
                 android:background="@drawable/rounded_bg"
                 android:drawableEnd="@drawable/money_ic"
                 android:inputType="numberDecimal"
