@@ -11,5 +11,10 @@
 
     </style>
 
+    <style name="TextoPadrao">
+        <item name="android:textColor">@color/grey700</item>
+
+    </style>
+
     <style name="Theme.Calculadoraimc" parent="Base.Theme.Calculadoraimc" />
 </resources>

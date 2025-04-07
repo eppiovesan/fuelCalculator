@@ -70,7 +70,11 @@
                 android:layout_marginTop="140dp"
                 android:background="@drawable/rounded_bg"
                 android:drawableEnd="@drawable/distance_ic"
-                android:hint="Ex: 90km " />
+                style="@style/TextoPadrao"
+                android:inputType="numberDecimal"
+                android:maxLength="6"
+                android:hint="Ex: 90km "
+                android:textColorHint="@color/grey500"/>
 
 
         </com.google.android.material.textfield.TextInputLayout>
