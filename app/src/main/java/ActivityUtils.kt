@@ -6,7 +6,5 @@ import android.app.Activity
 fun voltarTelaAnterior (activity: Activity){
     activity.finish()
 }
-
-
 class ActivityUtils {
 }

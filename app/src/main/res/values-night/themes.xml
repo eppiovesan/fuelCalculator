@@ -9,5 +9,7 @@
         <item name="android:textColor">@color/grey300</item>
         <item name="android:padding">16dp</item>
     </style>
+
+    <color name="iconeBotao">@color/grey100</color>
 </resources>
 
