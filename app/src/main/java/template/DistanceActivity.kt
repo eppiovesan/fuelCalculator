@@ -29,13 +29,7 @@ class DistanceActivity: AppCompatActivity() {
 
         val bt_voltar = findViewById<Button>(R.id.btn_voltar)
         val bt_continuar = findViewById<Button>(R.id.btn_continuar)
-
-
-        val viewModel = ViewModelProvider(this).get(CalculoViewModel::class.java)
-
         var edt_distance = findViewById<TextInputEditText>(R.id.edt_distance)
-
-
 
         bt_voltar.setOnClickListener {
             buttonVoltar()
@@ -63,8 +57,6 @@ class DistanceActivity: AppCompatActivity() {
             return null
         }
     }
-
-
     private fun buttonContinuar(){
         var viewModel = (application as fuelCalculator).sharedViewModel
         var edtDistance = setDistance()
@@ -73,7 +65,6 @@ class DistanceActivity: AppCompatActivity() {
             viewModel.distance = distance
             startActivity(Intent(this, ResultActivity::class.java))
         }
-
     }
 
     private fun buttonVoltar(){

@@ -9,7 +9,7 @@ class sharedViewModel: ViewModel() {
 
 
     fun calculaGasto(): Float {
-        var gasto: Float = (distance / consumptionFuel) * priceFuel
+        var gasto: Float = ((distance / consumptionFuel) * priceFuel)
         return gasto
     }
 

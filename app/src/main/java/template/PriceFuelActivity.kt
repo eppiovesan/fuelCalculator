@@ -17,12 +17,9 @@ import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
-import com.comunidadedevspace.imc.KEY_PRICE_FUEL
-import com.comunidadedevspace.imc.CalculoViewModel
 import com.comunidadedevspace.imc.template.fuelCalculator
 
 class PriceFuelActivity : AppCompatActivity() {
-    private lateinit var viewModel: CalculoViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,8 +53,6 @@ class PriceFuelActivity : AppCompatActivity() {
             return null
         }
     }
-
-
     private fun buttonContinuar() {
         var viewModel = (application as fuelCalculator).sharedViewModel
         var edtPrice = setFuelPrice()

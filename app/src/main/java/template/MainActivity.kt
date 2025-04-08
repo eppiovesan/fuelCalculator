@@ -27,8 +27,6 @@ class MainActivity : AppCompatActivity() {
 
         bt_iniciar.setOnClickListener {
             startActivity(Intent(this, PriceFuelActivity::class.java))
-
         }
-
     }
 }

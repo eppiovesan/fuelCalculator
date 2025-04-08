@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".PriceFuelActivity"
     android:background="@color/grey100">
 
 
     <ImageView
         android:id="@+id/img_fuelPrice"
-        android:layout_width="174dp"
-        android:layout_height="166dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="134dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="60dp"
         android:background="@color/grey100"
         app:flow_horizontalAlign="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/fuelprice" />
@@ -25,6 +24,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="@+id/img_fuelPrice"
+        android:layout_marginTop="60dp"
         android:background="@drawable/gradient_bc"
         app:layout_constraintBaseline_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -32,7 +32,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_fuelPrice"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
 
         <TextView
@@ -63,26 +63,26 @@
 
         <Button
             android:id="@+id/btn_voltar"
+            style="@style/BotaoPadrao"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginTop="140dp"
-            android:text="Voltar"
             android:background="@drawable/rounded_button"
-            style="@style/BotaoPadrao"
+            android:text="Voltar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
         <Button
             android:id="@+id/btn_continuar"
+            style="@style/BotaoPadrao"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
             android:layout_marginTop="140dp"
-            android:text="Continuar"
             android:background="@drawable/rounded_button"
-            style="@style/BotaoPadrao"
+            android:text="Continuar"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btn_voltar"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
@@ -98,15 +98,15 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/edt_price_fuel"
+                style="@style/TextoPadrao"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Ex: 3.69"
-                style="@style/TextoPadrao"
-                android:textColorHint="@color/grey500"
                 android:background="@drawable/rounded_bg"
                 android:drawableEnd="@drawable/money_ic"
+                android:hint="Ex: 3.69"
                 android:inputType="numberDecimal"
                 android:maxLength="6"
+                android:textColorHint="@color/grey500"
 
                 />
 

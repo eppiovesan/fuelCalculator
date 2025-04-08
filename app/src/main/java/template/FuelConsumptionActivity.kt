@@ -18,7 +18,6 @@ import com.comunidadedevspace.imc.DistanceActivity
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
-import com.comunidadedevspace.imc.CalculoViewModel
 import com.comunidadedevspace.imc.template.fuelCalculator
 import com.comunidadedevspace.imc.PriceFuelActivity
 

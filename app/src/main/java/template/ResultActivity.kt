@@ -7,9 +7,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.comunidadedevspace.imc.R
-import com.comunidadedevspace.imc.KEY_PRICE_FUEL
-import com.comunidadedevspace.imc.KEY_CONSUPTION_FUEL
-import com.comunidadedevspace.imc.KEY_DISTANCE
 import com.comunidadedevspace.imc.template.fuelCalculator
 
 // USAR VIEW MODEL para armazenar dados de uma tela para outra
@@ -22,7 +19,7 @@ class ResultActivity : AppCompatActivity() {
         val viewModel = (application as fuelCalculator).sharedViewModel
 
 
-        val gasto = viewModel.calculaGasto()
+        val gasto = String.format("%.2f",viewModel.calculaGasto()).toFloat()
         val price = viewModel.priceFuel
         val consumption = viewModel.consumptionFuel
         val distance = viewModel.distance
@@ -37,9 +34,6 @@ class ResultActivity : AppCompatActivity() {
         tv_price.text = price.toString()
         tv_consumption.text = consumption.toString()
         tv_distance.text = distance.toString()
-
-
-
 
 
         val bt_recalcular = findViewById<Button>(R.id.btn_recalcular)

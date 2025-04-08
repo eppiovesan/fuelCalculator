@@ -13,8 +13,8 @@
 
     <style name="TextoPadrao">
         <item name="android:textColor">@color/grey700</item>
-
     </style>
 
+    <color name="iconeBotao">@color/grey700</color>
     <style name="Theme.Calculadoraimc" parent="Base.Theme.Calculadoraimc" />
 </resources>
